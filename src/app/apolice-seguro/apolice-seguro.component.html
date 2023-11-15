@@ -1,0 +1,22 @@
+<!-- apolice-seguro.component.html -->
+<div>
+    <label for="nomeSegurado">Nome do Segurado:</label>
+    <input type="text" [(ngModel)]="nomeSegurado">
+  
+    <label for="sexo">Sexo:</label>
+    <select [(ngModel)]="sexo">
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+    </select>
+  
+    <label for="idade">Idade:</label>
+    <input type="number" [(ngModel)]="idade">
+  
+    <label for="valorAutomovel">Valor do Automóvel:</label>
+    <input type="number" [(ngModel)]="valorAutomovel">
+  
+    <button (click)="calcularApolice()">Calcular Apólice</button>
+  
+    <p>Valor da Apólice: {{ valorApolice | currency:'BRL' }}</p>
+  </div>
+  
